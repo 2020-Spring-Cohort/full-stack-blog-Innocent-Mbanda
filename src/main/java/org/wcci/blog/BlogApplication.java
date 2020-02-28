@@ -10,4 +10,7 @@ public class BlogApplication {
         SpringApplication.run(BlogApplication.class, args);
     }
 
+    public static interface AuthorStorage {
+        void store(Author authorToStore)
+    }
 }
