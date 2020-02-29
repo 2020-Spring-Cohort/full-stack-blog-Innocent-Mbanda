@@ -4,10 +4,11 @@ import org.wcci.blog.models.Category;
 
 import java.util.Collection;
 
-public interface CategoryStorage {
+public interface CategoriesStorage {
 
     Collection<Category>findAllCategories();
 
     void store(Category category);
-    Category findCategoriesByname(String CategoryName);
+
+     Category findCategoryByName(String categoryName);
 }

@@ -1,4 +1,5 @@
-package org.wcci.blog.storage;
-
-public class AuthorStorageJpaImpl {
-}
+//package org.wcci.blog.storage;
+//
+//public class AuthorStorageJpaImpl {
+//    private final
+//}

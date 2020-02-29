@@ -1,70 +1,44 @@
 package org.wcci.blog.models;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Objects;
+import javax.persistence.*;
+import java.util.*;
 
 
 @Entity
 public class Post {
     @Id
     @GeneratedValue
-    private String postcontent;
-    private String hastag;
-    private String author;
-    private int   Date;
     private Long id;
+    private String name;
+    private String tag;
+    private String author;
+    private int Date;
     private Calendar calendar;
     @ManyToMany
     private Collection<Author> authors;
+    @ManyToOne
+    private Category category;
+    private String title;
+    @ManyToMany
+    private Set<Tag> Tag;
+
+    public Post(String title, String name, Tag tag, Id id, Author author, Calendar calendar) {
 
 
-    public Post(){}
-
-
-
-    public Post(String postcontent, String hastag, String author) {
-
-        this.postcontent = postcontent;
-        this.hastag = hastag;
-        this.author = author;
-    }
-
-    public String getPostcontent() {
-        return postcontent;
-    }
-
-    public String getHastag() {
-        return hastag;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public Calendar getCalendar() {
-        return calendar;
-    }
-
-
-    @Override
-    public boolean equals(Objects o){
-        if (this == o) return true;
-        if (o == null|| getClass() != o. getClass()) return false;
-        Post post = (Post) o;
-        return Objects.equals(id, post.id) &&
-                Objects.equals(postcontent,post,postcontent) &&
-                Objects.equals(hastag,post,hastag) &&
-                Objects.equals(author,post,author);
+        this.title = title;
+        this.authors = new ArrayList<Author>(Arrays.<Author>asList());
+        this.name = name;
+        this.Tag = new HashSet<>();
 
     }
+  public Post (){}
 
-    @Override
-    public int hashCode() {return Objects.hash(id, postcontent,hastag, author, calendar);}
+    public Set<Tag> getTag() {
+        return Tag;
+    }
 
+    public void setTag(Set<Tag> tag) {
+        Tag = tag;
+    }
 }

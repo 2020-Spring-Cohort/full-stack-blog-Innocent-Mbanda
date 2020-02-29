@@ -2,6 +2,7 @@ package org.wcci.blog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.wcci.blog.models.Author;
 
 @SpringBootApplication
 public class BlogApplication {
@@ -11,6 +12,6 @@ public class BlogApplication {
     }
 
     public static interface AuthorStorage {
-        void store(Author authorToStore)
+        void store(Author authorToStore);
     }
 }
