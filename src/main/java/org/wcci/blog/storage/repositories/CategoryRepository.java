@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Service
 public interface CategoryRepository extends CrudRepository <Category, Long>  {
-    Optional<Category> findById(Long id);
+    Optional<Category> findByName(String name);
 }

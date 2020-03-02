@@ -2,16 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
-
 body{
     font-family: "Roboto",sans-serif;
     overflow: hidden;
 }
-
 .mainTittle{
-    position: relative;
+    /* position: relative; */
     height: 100vw;
     width: 100vw;
     background: url("../images/Liked\ by3.jfif")no-repeat;
@@ -20,9 +17,7 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-
 }
-
 .mainTittle :before{
     content:'';
     position: relative;
@@ -32,7 +27,6 @@ body{
     height: 100%;
     background-color: #144A66
 }
-
 .welcomeMessage{
     max-width: 1000px;
     padding: 2rem;
@@ -41,20 +35,17 @@ body{
     color:#E7E7E7;
     padding: 300px;
 }
-
 .welcomeMessage h1{
     font-size: 4.2rem;
     margin-bottom: 1rem;
     color:#C6B17F;
     font-family: "Dancing Script";
 }
-
 .welcomeMessage p{
     color:#E7E7E7;
     font-size: 1.5rem;
     font-weight: 100px;
 }
-
 .Readmore{
     padding: 0.74rem 1.25rem;
     margin-top: .8rem;
@@ -67,7 +58,38 @@ body{
     display:inline-block;
     text-transform: uppercase;
 }
-
 .Readmore:hover{
     opacity: 0.7;
 }
+
+
+.Menu ul li a{
+display: inline-block; 
+text-decoration: none;
+color: black;
+font-size: 30px;
+}
+/* .ul{
+
+}
+
+.ul li{
+    list-style: none;
+
+    
+}
+
+.ul li a {
+    text-decoration: none;
+    display: inline-block;
+     */
+}
+
+
+
+
+
+
+
+
+  

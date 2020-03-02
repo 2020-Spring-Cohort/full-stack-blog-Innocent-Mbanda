@@ -14,14 +14,16 @@ public class Tag {
     @GeneratedValue
     private long id;
     private String name;
-    @ManyToMany (mappedBy = "tags")
-    private Collection<Author> authors;
+    @ManyToMany
+    private Collection<Post> post;
+    private String title;
 
 
-    protected Tag(){}
-    public Tag(String name){
-        authors = new ArrayList<>();
-        this.name =name;
+    protected Tag() {
+    }
+
+    public Tag(String name) {
+        this.name = name;
     }
 
     public long getId() {
@@ -41,11 +43,9 @@ public class Tag {
                 Objects.equals(name, tag.name);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, authors);
-    }
 }
+
+
 
 
 

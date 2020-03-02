@@ -18,7 +18,7 @@ public class CategoriesController {
 
     @RequestMapping ("/categories")
     public String displayCategories(Model model){
-        model.addAttribute("categories", categoriesStorage.findAllCategories());
+        model.addAttribute("categories", categoriesStorage.getAll());
         return "categoriesView";
 
         }
@@ -27,7 +27,7 @@ public class CategoriesController {
         public String displaySingleCategory(@PathVariable String categoriesName, Model model){
             Category retrievedCategory = categoriesStorage.findCategoryByName(categoriesName);
             model.addAttribute("category",retrievedCategory);
-            return categoriesName;
+            return "posts";
         }
 
 

@@ -47,8 +47,7 @@ public class CategoriesControllerTest {
              public void categoryControllerShouldInstantiate() throws Exception {
                 Category testCategory = new Category("Spring is hard");
                 List<Category> categoryCollection = Collections.singletonList(testCategory);
-                when(mockStorage.findAllCategories()).thenReturn((categoryCollection));
-                when(mockStorage.findAllCategories()).thenReturn(categoryCollection);
+                when(mockStorage.findCategoryById(1)).thenReturn((testCategory));
                 mockMvc.perform(get("/categories"))
                         .andDo(print())
                         .andExpect(status().isOk())
